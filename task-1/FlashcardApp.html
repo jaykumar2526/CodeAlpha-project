@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 60vw;
+            max-height: 100%;
+
+            background: #0f1d2bc2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1{
+            text-align: center;
+            color: #fff;
+        }
+
+        .card-creator,
+        .flashcard-quiz,
+        .score-display {
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5f63686e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #3e4348;
+        }
+
+        .flashcard-quiz {
+            text-align: center;
+            color: #fff;
+        }
+
+        #flashcard-answer {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #fff;
+            
+        }
+
+        .score-display {
+            text-align: center;
+            margin-top: 30px;
+            color: #fff;
+            
+        }
+
+        #score {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Flashcard Quiz App</h1>
+
+        <!-- Flashcard creation form -->
+        <div class="card-creator">
+            <input type="text" id="question" placeholder="Enter question" />
+            <input type="text" id="answer" placeholder="Enter answer" />
+            <button id="add-flashcard">Add Flashcard</button>
+        </div>
+
+        <!-- Flashcard review section -->
+        <div class="flashcard-quiz">
+            <h2>Quiz Yourself</h2>
+            <div id="flashcard-display">
+                <p id="flashcard-question">Question will appear here</p>
+                <button id="show-answer">Show Answer</button>
+                <p id="flashcard-answer" style="display: none;">Answer will appear here</p>
+            </div>
+            <button id="correct-answer">Correct</button>
+            <button id="wrong-answer">Wrong</button>
+            <button id="next-flashcard">Next Flashcard</button>
+        </div>
+
+        <!-- Score display -->
+        <div class="score-display">
+            <h2>Quiz Score</h2>
+            <p id="score">Correct: 0 | Incorrect: 0</p>
+        </div>
+    </div>
+
+    <script src="FlashcardApp.js"></script>
+</body>
+
+</html>
