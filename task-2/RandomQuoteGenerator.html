@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg') no-repeat center center;
+                background-size: cover;
+                /* Adjust to 'contain' if you want the entire image visible */
+                background-attachment: fixed;
+                /* Keep the image fixed while scrolling */
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                position: relative;
+            }
+
+        .container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+            background-color: #1e2c2c61;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1;
+            overflow: auto;
+        }
+
+        #quote-container {
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            /* Ensures long words or quotes wrap within the container */
+        }
+
+        #quote {
+            font-size: 1.5em;
+            font-style: italic;
+            margin: 0;
+            /* Ensure no extra margin affects layout */
+        }
+
+        #author {
+            font-size: 1.2em;
+            color: #fffcfc;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #636465;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #27282a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Random Quote Generator</h1>
+        <div id="quote-container">
+            <p id="quote">Click the button to get a new quote!</p>
+            <p id="author"></p>
+        </div>
+        <button id="new-quote">New Quote</button>
+        <button id="share-quote">Share on Linkedin</button>
+    </div>
+
+    <script src="RandomQuoteGenerator.js"></script>
+</body>
+
+</html>
